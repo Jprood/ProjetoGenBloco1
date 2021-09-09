@@ -3,14 +3,16 @@ package bloco1;
 import java.io.IOException;
 import java.util.Scanner;
 
+import jdk.internal.misc.FileSystemOption;
+
 public class Main {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		Scanner sc = new Scanner(System.in);
 
-
-		System.out.println("******************************************************************************************************");
+		System.out.println(
+				"******************************************************************************************************");
 		System.out.println("Jogo de perguntas e respostas!!");
 
 		System.out.print("Digite seu nome: ");
@@ -20,21 +22,39 @@ public class Main {
 		System.out.print("Você é aluno ou professor? ");
 		String alunoProfessor = sc.nextLine();
 
-
-		if (alunoProfessor.equals("aluno")){
+		if (alunoProfessor.equals("aluno")) {
 
 			System.out.print("Você está no ensino médio ou fundamental? ");
 			String escolaridade = sc.nextLine();
 			System.out.print("Qual a sua idade? ");
 			int idade = sc.nextInt();
 
-			Aluno aluno1 = new Aluno(nome,nomeInstituicao,escolaridade,idade);
-			
+			Aluno aluno1 = new Aluno(nome, nomeInstituicao, escolaridade, idade);
 
-			System.out.println("******************************************************************************************************");
-			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+			System.out.println(
+					"******************************************************************************************************");
+			System.out.println(
+					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 			System.out.print("Escolha a matéria: ");
 		}
+
+		if (alunoProfessor.equals("professor")) {
+
+			System.out.print("Qual sua Especializa��o?:  ");
+			String especializacao = sc.nextLine();
+
+			Professor prof1 = new Professor(nome, nomeInstituicao, especializacao);
+			
+			System.out.println("Pressione ENTER para continuar ");
+			
+			String spaco = sc.nextLine();
+
+			System.out.println(
+					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+		}
+		
+		
 	}
 }
 
