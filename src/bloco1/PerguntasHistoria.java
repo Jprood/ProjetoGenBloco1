@@ -7,7 +7,8 @@ public class PerguntasHistoria extends Perguntas{
 		super(codigo, pergunta, resposta1, resposta2, resposta3, resposta4, respostaCorreta);
 	}
 	
-	PerguntasHistoria historia1 = new PerguntasHistoria(1, "Como é chamada a Conjuração Baiana?", 
+	PerguntasHistoria historia1 = new PerguntasHistoria(1, "Como ï¿½ chamada a Conjuraï¿½ï¿½o Baiana?", 
 	"Revolta dos Alfaiates", "Guerra da Cisplatina", "Cabanagem", "Balaiada", 1);
+
 	
 }

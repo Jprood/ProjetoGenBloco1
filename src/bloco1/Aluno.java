@@ -4,6 +4,9 @@ public class Aluno extends Usuario{
 	
 	private String escolaridade;
 	private int idade, pontuacao;
+
+	public Aluno(){
+	}
 	
 	public Aluno(String nome, String nomeInstituicao, String escolaridade, int idade) {
 		super(nome, nomeInstituicao);

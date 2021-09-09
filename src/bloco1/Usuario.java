@@ -4,6 +4,9 @@ public class Usuario {
 	
 	private String nome, nomeInstituicao;
 
+	public Usuario(){
+	}
+
 	public Usuario(String nome, String nomeInstituicao) {
 		super();
 		this.nome = nome;

@@ -1,36 +1,33 @@
 package bloco1;
 
 public class Menu {
-	
-	int op = 0;
-	
-	switch (op) {
-		case 1://Cadastro
-			return 0;
+
+
+
+}
+
+/*
+switch (op) {
+		case 1: //Cadastro
+			System.out.println();
 			break;
-			
 		case 2://Jogar
 			return 0;
 			break;
-			
-		case 3://Opções Professor
-			return 0;
-			break;
-			
-		case 4://Pontuação
-			return 0;
-			break;
-			
-		case 5://Limpar console
-			return 0;
-			break;
-			
-		case 6://Encerrar
-			return 0;
-			break;
-			
-		default
-			return 0;
-		}	
 
-}
+		case 3://Opï¿½ï¿½es Professor
+			System.out.println();
+			break;
+
+		case 4://Pontuaï¿½ï¿½o
+			System.out.println();
+			break;
+
+		case 5://Limpar console
+			System.out.println();
+			break;
+
+		case 6://Encerrar
+			System.out.println();
+			break;
+ */
