@@ -21,7 +21,7 @@ public class Main {
 		String nomeInstituicao = sc.nextLine();
 		System.out.print("VocÃª Ã© aluno ou professor? ");
 		String alunoProfessor = sc.nextLine();
-
+		//Menu Aluno
 		if (alunoProfessor.equals("aluno")) {
 
 			System.out.print("VocÃª estÃ¡ no ensino mÃ©dio ou fundamental? ");
@@ -37,10 +37,10 @@ public class Main {
 					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 			System.out.print("Escolha a matÃ©ria: ");
 		}
-
+			// Menu Professor
 		if (alunoProfessor.equals("professor")) {
 
-			System.out.print("Qual sua Especialização?:  ");
+			System.out.print("Qual sua Especialização?(Historia, Portugues, Matemática):  ");
 			String especializacao = sc.nextLine();
 
 			Professor prof1 = new Professor(nome, nomeInstituicao, especializacao);
@@ -52,9 +52,29 @@ public class Main {
 			System.out.println(
 					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
+			if (especializacao.equals("historia"))
+			{
+				System.out.println("*******************************************************************************************************************************************************************************");
+				
+				System.out.println("Você deseja Criar uma Pergunta ou Excluir? (criar,excluir) :");
+				String criar = sc.nextLine();
+				
+				
+				
+				
+				
+				
+			}
 		}
 		
 		
+			
+			
+			
+		}
+		
+		
+		
 	}
-}
+
 
