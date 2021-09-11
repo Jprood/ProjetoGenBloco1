@@ -4,6 +4,9 @@ public class Perguntas {
 	
 	private String pergunta, resposta1, resposta2, resposta3, resposta4;
 	private int codigo, respostaCorreta;
+
+	public Perguntas(){
+	}
 	
 	public Perguntas(int codigo, String pergunta, String resposta1, String resposta2, 
 		String resposta3, String resposta4, int respostaCorreta) {

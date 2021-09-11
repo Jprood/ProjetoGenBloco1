@@ -3,7 +3,6 @@ package bloco1;
 import java.io.IOException;
 import java.util.Scanner;
 
-import jdk.internal.misc.FileSystemOption;
 
 public class Main {
 
@@ -40,14 +39,13 @@ public class Main {
 			// Menu Professor
 		if (alunoProfessor.equals("professor")) {
 
-			System.out.print("Qual sua Especialização?(Historia, Portugues, Matemática):  ");
+			System.out.print("Qual sua Especializaï¿½ï¿½o?(historia, portugues, matematica):  ");
 			String especializacao = sc.nextLine();
 
 			Professor prof1 = new Professor(nome, nomeInstituicao, especializacao);
 			
 			System.out.println("Pressione ENTER para continuar ");
-			
-			String spaco = sc.nextLine();
+
 
 			System.out.println(
 					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -56,25 +54,21 @@ public class Main {
 			{
 				System.out.println("*******************************************************************************************************************************************************************************");
 				
-				System.out.println("Você deseja Criar uma Pergunta ou Excluir? (criar,excluir) :");
+				System.out.println("Voce deseja Criar uma Pergunta ou Excluir? (criar,excluir) :");
 				String criar = sc.nextLine();
-				
-				
-				
-				
-				
-				
+
+
+				PerguntasHistoria perg = new PerguntasHistoria();
+
+				System.out.println(perg.historia1.getPergunta());
+
+
+
 			}
 		}
-		
-		
-			
-			
-			
+
 		}
-		
-		
-		
+
 	}
 
 

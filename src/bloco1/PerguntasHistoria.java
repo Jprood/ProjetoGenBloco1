@@ -1,14 +1,11 @@
 package bloco1;
 
-public class PerguntasHistoria extends Perguntas{
+public class PerguntasHistoria {
 
-	public PerguntasHistoria(int codigo, String pergunta, String resposta1, String resposta2, String resposta3,
-			String resposta4, int respostaCorreta) {
-		super(codigo, pergunta, resposta1, resposta2, resposta3, resposta4, respostaCorreta);
+	public PerguntasHistoria(){
 	}
-	
-	PerguntasHistoria historia1 = new PerguntasHistoria(1, "Como � chamada a Conjura��o Baiana?", 
+
+	Perguntas historia1 = new Perguntas(1, "Como � chamada a Conjura��o Baiana?",
 	"Revolta dos Alfaiates", "Guerra da Cisplatina", "Cabanagem", "Balaiada", 1);
 
-	
 }
