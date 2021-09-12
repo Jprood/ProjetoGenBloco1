@@ -1,6 +1,6 @@
 package bloco1;
 
-public class Aluno extends Usuario{
+public class Aluno extends Usuario {
 	
 	private String escolaridade;
 	private int idade, pontuacao;
@@ -38,5 +38,5 @@ public class Aluno extends Usuario{
 	public void setPontuacao(int pontuacao) {
 		this.pontuacao = pontuacao;
 	}
-	
+
 }

@@ -1,6 +1,6 @@
 package bloco1;
 
-public class Professor extends Usuario{
+public class Professor extends Usuario {
 	
 	private String especializacao;
 
@@ -16,5 +16,5 @@ public class Professor extends Usuario{
 	public void setEspecializacao(String especializacao) {
 		this.especializacao = especializacao;
 	}
-	
+
 }

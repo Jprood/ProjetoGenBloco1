@@ -1,9 +1,7 @@
 package bloco1;
 
 public class Menu {
-
-
-
+	
 }
 
 /*
@@ -31,3 +29,5 @@ switch (op) {
 			System.out.println();
 			break;
  */
+
+
