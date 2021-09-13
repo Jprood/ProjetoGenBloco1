@@ -9,6 +9,7 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		PerguntasMock perguntas = new PerguntasMock();
+		int opcao;
 
 		System.out.println(
 				"******************************************************************************************************");
@@ -32,7 +33,6 @@ public class Main {
 
 			Aluno aluno1 = new Aluno(nome, nomeInstituicao, escolaridade, idade);
 
-			int opcao;
 			do {
 
 				System.out.println(
@@ -44,13 +44,13 @@ public class Main {
 				String materia = sc.nextLine();
 				if (materia.equals("historia")) {
 
-					perguntas.listarHistoria();
+					perguntas.responderHistoria();
 				} else if (materia.equals("portugues")) {
 
-					perguntas.listarPortugues();
+					perguntas.responderPortugues();
 				} else if (materia.equals("matematica")) {
 
-					perguntas.listarMatematica();
+					perguntas.responderMatematica();
 				}
 
 				System.out.println("Deseja continar a estudar? \n1-sim \n0-não:");
@@ -60,45 +60,85 @@ public class Main {
 		}
 		// Menu Professor
 		if (alunoProfessor.equals("professor")) {
-
+				
 			System.out.print("Qual sua Especializacao?(historia, portugues, matematica):  ");
 			String especializacao = sc.nextLine();
 
 			Professor prof1 = new Professor(nome, nomeInstituicao, especializacao);
+			
+			do {
 
-			System.out.println("Pressione ENTER para continuar ");
-
-			System.out.println(
-					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+				System.out.println(
+						"******************************************************************************************************");
+				System.out.println(
+						"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 				System.out.println("Voce deseja Criar uma Pergunta ou Excluir? (criar,excluir) :");
 				String ce = sc.nextLine();
-				
-				if(ce.equals("criar")) {
-					
+
+				if (ce.equals("criar")) {
+
 					System.out.print("Escreva a pergunta: ");
 					String pergunta = sc.nextLine();
 					System.out.println("Escreva alternativa A: ");
-					String resposta1 = "A) "+ sc.nextLine();
+					String resposta1 = "A)" + sc.nextLine();
 					System.out.println("Escreva alternativa B: ");
-					String resposta2 = "B) "+ sc.nextLine();
+					String resposta2 = "B)" + sc.nextLine();
 					System.out.println("Escreva alternativa C: ");
-					String resposta3 = "C) "+ sc.nextLine();
+					String resposta3 = "C)" + sc.nextLine();
 					System.out.println("Escreva alternativa D: ");
-					String resposta4 = "D) "+ sc.nextLine();
+					String resposta4 = "D)" + sc.nextLine();
 					System.out.println("Escreva a alternativa da resposta correta: ");
 					char rc = sc.next().charAt(0);
-					
-					Perguntas perguntac= new Perguntas(pergunta, resposta1, resposta2, resposta3, resposta4, rc);  
-					
+
+					Perguntas perguntac = new Perguntas(pergunta, resposta1, resposta2, resposta3, resposta4, rc);
+
 					if (especializacao.equals("historia")) {
-						
+
 						perguntas.listaHistoria.add(perguntac);
+						perguntas.listarHistoria();
+					} else if (especializacao.equals("portugues")) {
+
+						perguntas.listaPortugues.add(perguntac);
+						perguntas.listarPortugues();
+					} else if (especializacao.equals("matematica")) {
+
+						perguntas.listaMatematica.add(perguntac);
+						perguntas.listarMatematica();
 					}
+
 				}
-			}
+				if (ce.equals("excluir")) {
+
+					if (especializacao.equals("historia")) {
+
+						perguntas.listarHistoria();
+						System.out.print("Qual questão você gostaria de excluir: ");
+						int op = sc.nextInt();
+						perguntas.listaHistoria.remove(op - 1);
+						perguntas.listarHistoria();
+					} else if (especializacao.equals("portugues")) {
+
+						perguntas.listarPortugues();
+						System.out.print("Qual questão você gostaria de excluir: ");
+						int op = sc.nextInt();
+						perguntas.listaPortugues.remove(op - 1);
+						perguntas.listarPortugues();
+					} else if (especializacao.equals("matematica")) {
+
+						perguntas.listarMatematica();
+						System.out.print("Qual questão você gostaria de excluir: ");
+						int op = sc.nextInt();
+						perguntas.listaMatematica.remove(op - 1);
+						perguntas.listarMatematica();
+					}
+
+				}
+				System.out.println("Deseja continuar: \n1-sim \n0-não");
+				opcao = sc.nextInt();
+				
+
+			} while (opcao != 0);
 		}
-
 	}
-
-
+}

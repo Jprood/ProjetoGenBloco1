@@ -54,12 +54,11 @@ public class PerguntasMock {
 		listaMatematica.add(matematica2);
 	}
 
-	public void listarHistoria() {
+	public void responderHistoria() {
 
 		for (Perguntas lista : listaHistoria) {
-
-			System.out.print(listaHistoria.indexOf(lista)+ 1+ "-");
-			System.out.println(lista);
+			
+			listarHistoria();
 			System.out.print("\nEscolha a alternativa: ");
 			char alternativa = sc.next().charAt(0);
 
@@ -73,11 +72,11 @@ public class PerguntasMock {
 		}
 	}
 
-	public void listarPortugues() {
+	public void responderPortugues() {
 
 		for (Perguntas lista : listaPortugues) {
-
-			System.out.println(lista);
+			
+			listarPortugues();
 			System.out.print("\nEscolha a alternativa: ");
 			char alternativa = sc.next().charAt(0);
 
@@ -91,11 +90,11 @@ public class PerguntasMock {
 		}
 	}
 
-	public void listarMatematica() {
+	public void responderMatematica() {
 
 		for (Perguntas lista : listaMatematica) {
-
-			System.out.println(lista);
+			
+			listarMatematica();
 			System.out.print("\nEscolha a alternativa: ");
 			char alternativa = sc.next().charAt(0);
 
@@ -105,7 +104,32 @@ public class PerguntasMock {
 			} else {
 
 				System.out.println("Resposta Errada!!!");
-			}
+			}	
+		}
+	}
+	public void listarHistoria() {
+		
+		for (Perguntas lista: listaHistoria) {
+			
+			System.out.print(listaHistoria.indexOf(lista)+ 1+ "-");
+			System.out.println(lista);
+		}
+	}
+	public void listarPortugues() {
+		
+		for (Perguntas lista: listaPortugues) {
+			
+			System.out.print(listaPortugues.indexOf(lista)+ 1+ "-");
+			System.out.println(lista);
+		}
+		
+	}
+	public void listarMatematica() {
+		
+		for (Perguntas lista: listaMatematica) {
+			
+			System.out.print(listaMatematica.indexOf(lista)+ 1+ "-");
+			System.out.println(lista);
 		}
 	}
 
