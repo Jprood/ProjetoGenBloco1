@@ -1,4 +1,4 @@
-package bloco1;
+package entidades;
 
 public class Perguntas {
 	
@@ -8,6 +8,7 @@ public class Perguntas {
 
 	public Perguntas(){
 	}
+
 	
 	public Perguntas( String pergunta, String resposta1, String resposta2, 
 		String resposta3, String resposta4, char respostaCorreta) {
