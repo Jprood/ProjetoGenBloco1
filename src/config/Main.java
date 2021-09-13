@@ -13,17 +13,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-
+    	//Definindo atributos
         Scanner sc = new Scanner(System.in);
         PerguntasMock perguntas = new PerguntasMock();
         int opcao;
         String nomeInstituicao="X";
         int idade=0;
-
-        UtilMenu.abertura();
+        //Escopo do menu de abertura
+        UtilMenu.abertura();//Metodo estatico
         UtilMenu.separador();
 
-
+        
         // cadastro
         System.out.print("Digite seu nome ou entrar como visitante: ");
         String nome = sc.nextLine();
@@ -53,6 +53,8 @@ public class Main {
             if (!nome.equals("visitante")) {
                 System.out.print("Qual a sua idade? ");
                 idade = sc.nextInt();
+                
+             
                 sc.nextLine();
 
                 Usuario aluno = new Aluno(nome, nomeInstituicao, idade);
@@ -104,11 +106,11 @@ public class Main {
                 System.out.print("Qual sua Especializacao?(historia, portugues, matematica):  ");
                 especializacao = sc.nextLine();
             }
-
+            
             Usuario prof = new Professor(nome, nomeInstituicao, especializacao);
 
             do {
-
+            	//Criação de perguntas
                 UtilMenu.separador();
                 UtilMenu.limpaTela();
                 System.out.println("Voce deseja Criar uma Pergunta ou Excluir? (criar,excluir) :");
@@ -151,13 +153,13 @@ public class Main {
                         perguntas.listarMatematica();
                     }
 
-                }
+                }//Metodo para evitar ou repaginar possiveis erros
                 if (ce.equals("excluir")) {
 
                     if (especializacao.equals("historia")) {
 
                         perguntas.listarHistoria();
-                        try {
+                        try {// ao inves do erro de index, aparecera essa forma de maior entendimento
                             System.out.print("Qual questao voce gostaria de excluir: ");
                             int op = sc.nextInt();
                             perguntas.listaHistoria.remove(op - 1);
@@ -190,7 +192,7 @@ public class Main {
                     }
 
                 }
-
+                //Metodo agradecer, repete ou encerra 
                 System.out.println("Deseja continuar: \n1-sim \n0-nao");
                 opcao = sc.nextInt();
                 sc.nextLine();

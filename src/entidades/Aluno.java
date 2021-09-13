@@ -1,23 +1,23 @@
 package entidades;
 
-public class Aluno extends Usuario {
+public class Aluno extends Usuario {//Criação da classe Aluno
 	
-	private String escolaridade;
+	private String escolaridade;// Definição dos atributos de Aluno
 	private int idade;
 
-	public Aluno(){
+	public Aluno(){//construtor generico 
 	}
 
-	public Aluno(String nome, String nomeInstituicao) {
+	public Aluno(String nome, String nomeInstituicao) {//Construtor da classe aluno
 		super(nome, nomeInstituicao);
 	}
 
-	public Aluno(String nome, String nomeInstituicao, int idade) {
+	public Aluno(String nome, String nomeInstituicao, int idade) {//Utilizando metodos da classe Usuario
 		super(nome, nomeInstituicao);
 		this.idade = idade;
 	}
 
-	public int getIdade() {
+	public int getIdade() {//demais metodos da classe Aluno
 		return idade;
 	}
 
@@ -25,7 +25,7 @@ public class Aluno extends Usuario {
 		this.idade = idade;
 	}
 
-
+	//polimorfismo da classe agradecer
 	@Override
 	public void agradecer() {
 		if(!getNomeInstituicao().equals("X")) {

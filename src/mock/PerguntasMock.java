@@ -6,20 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PerguntasMock {
+public class PerguntasMock {// MOCK = Ambiente de testes
 
 	Scanner sc = new Scanner(System.in);
-
+	//Constructor, Ao chamar o construtor ele executa um metodo para adicionar os objeto de testes na lista
 	public PerguntasMock() {
 
 		adicionarPerguntas();
 	}
 
-
+	//Listas de separação de materias
 	public List<Perguntas> listaHistoria = new ArrayList<>();
 	public List<Perguntas> listaPortugues = new ArrayList<>();
 	public List<Perguntas> listaMatematica = new ArrayList<>();
-
+	//Criação dos Objetos de teste
 	Perguntas historia1 = new Perguntas("Como e chamada a Conjuracao Baiana?", "A)Revolta dos Alfaiates",
 			"B)Guerra da Cisplatina", "C)Cabanagem", "D)Balaiada", 'a');
 
@@ -46,7 +46,7 @@ public class PerguntasMock {
 	Perguntas matematica2 = new Perguntas(
 			"Marcia decidiu ofertar um lanche as pessoas em situacao de rua na sua cidade. Para isso, ela decidiu confeccionar sanduiches e foi ate a padaria perto da sua casa, onde o kg de pao frances custa R$ 12,00. Sabendo que Marcia possuia R$ 42,00 para comprar paes, quantos quilos ela conseguiu comprar?",
 			"A)4,5kg", "B)3,5kg", "C)4kg", "D)3kg", 'b');
-
+	//Metodo para adicionar os objetos nas listas.
 	public void adicionarPerguntas() {
 
 		listaHistoria.add(historia1);
@@ -56,7 +56,7 @@ public class PerguntasMock {
 		listaMatematica.add(matematica1);
 		listaMatematica.add(matematica2);
 	}
-
+	// Metodo para percorrer a lista e responder o questionario, fazendo no final a comparação de respostas
 	public void responderHistoria() {
 
 		for (Perguntas lista : listaHistoria) {
@@ -113,6 +113,7 @@ public class PerguntasMock {
 			}	
 		}
 	}
+	//metodo para mostrar as listas
 	public void listarHistoria() {
 		
 		for (Perguntas lista: listaHistoria) {

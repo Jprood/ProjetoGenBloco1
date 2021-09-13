@@ -1,15 +1,15 @@
 package entidades;
 
 public class Perguntas {
-	
+	//Tributos da classe Perguntas
 	private String pergunta, resposta1, resposta2, resposta3, resposta4;
 	
 	private char respostaCorreta;
 
-	public Perguntas(){
+	public Perguntas(){//constructor generico
 	}
 
-	
+	//Constructor da classe Perguntas
 	public Perguntas( String pergunta, String resposta1, String resposta2, 
 		String resposta3, String resposta4, char respostaCorreta) {
 		super();
@@ -20,7 +20,7 @@ public class Perguntas {
 		this.resposta4 = resposta4;
 		this.respostaCorreta = respostaCorreta;
 	}
-	
+	//Metodos utilizados
 	public String getPergunta() {
 		return pergunta;
 	}
@@ -69,7 +69,7 @@ public class Perguntas {
 	public void setRespostaCorreta(char respostaCorreta) {
 		this.respostaCorreta = respostaCorreta;
 	}
-
+	//metodo generico para classe, assume para o objeto a forma de como mostrar na tela 
 	@Override
 	public String toString() {
 		return pergunta+ "\n"+ resposta1+ "\n"+ resposta2+ "\n"+ resposta3+ "\n"+ resposta4;
