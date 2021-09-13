@@ -18,7 +18,7 @@ public class Main {
         PerguntasMock perguntas = new PerguntasMock();
         int opcao;
         String nomeInstituicao="X";
-        int idade=0;
+        Integer idade=0;
         //Escopo do menu de abertura
         UtilMenu.abertura();//Metodo estatico
         UtilMenu.separador();
@@ -37,24 +37,23 @@ public class Main {
             nomeInstituicao = "X";
         }
 
-        System.out.print("Entrar como aluno ou professor? ");
+        System.out.print("Entrar como alune ou professore? ");
         String alunoProfessor = sc.nextLine();
 
-        while (!alunoProfessor.equals("aluno") && !alunoProfessor.equals("professor")) {
-            System.out.println("Opcao invalida, escreva se é aluno ou professor!");
-            System.out.print("Voce e aluno ou professor? ");
+        while (!alunoProfessor.equals("alune") && !alunoProfessor.equals("professore")) {
+            System.out.println("Opcao invalida, escreva se voce alune ou professore!");
+            System.out.print("Voce e alune ou professore? ");
             alunoProfessor = sc.nextLine();
         }
 
-        // Menu Aluno
+        // Menu Alune
 
-        if (alunoProfessor.equals("aluno")) {
+        if (alunoProfessor.equals("alune")) {
 
             if (!nome.equals("visitante")) {
                 System.out.print("Qual a sua idade? ");
                 idade = sc.nextInt();
                 
-             
                 sc.nextLine();
 
                 Usuario aluno = new Aluno(nome, nomeInstituicao, idade);
@@ -71,7 +70,7 @@ public class Main {
                 String materia = sc.nextLine();
 
                 while (!materia.equals("historia") && !materia.equals("portugues") && !materia.equals("matematica")) {
-                    System.out.println("Opcao inválida");
+                    System.out.println("Opcao invalida");
                     System.out.print("Escolha a materia: ");
                     materia = sc.nextLine();
                 }
@@ -94,8 +93,8 @@ public class Main {
             } while (opcao != 0);
             aluno.agradecer();
         }
-        // Menu Professor
-        if (alunoProfessor.equals("professor")) {
+        // Menu Professore
+        if (alunoProfessor.equals("professore")) {
 
             System.out.print("Qual sua Especializacao?(historia, portugues, matematica):  ");
             String especializacao = sc.nextLine();
