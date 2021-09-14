@@ -8,6 +8,7 @@ import mock.PerguntasMock;
 import tela.UtilMenu;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -50,11 +51,19 @@ public class Main {
 
         if (alunoProfessor.equals("alune")) {
 
-            if (!nome.equals("visitante")) {
-                System.out.print("Qual a sua idade? ");
-                idade = sc.nextInt();
-                
-                sc.nextLine();
+        	if (!nome.equals("visitante")) {
+                boolean continua = true;
+                do {
+                    try {
+                        System.out.print("\nQual a sua idade? ");
+                        idade = sc.nextInt();
+                        continua = false;
+                    } catch (InputMismatchException e) {
+                        System.err.println("Não é permitido inserir letras, informe apenas números inteiros!");
+                        sc.nextLine();
+                    }
+                }while(continua);
+                    sc.nextLine();
 
                 Usuario aluno = new Aluno(nome, nomeInstituicao, idade);
             }
